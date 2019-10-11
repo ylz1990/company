@@ -17,25 +17,28 @@
         	<div class="scd_top">
                 <span>头条新闻</span>
                 <div class="pst">
-                    当前位置：<a href="">首页</a>-<a href="">新闻中心</a>
+                    当前位置：<a href="{% url 'index' %}">首页</a>-<a href="">新闻中心</a>
                 </div>
             </div>
             <div class="new_m">
             	<div class="box mainPhoto"> <span class="goleft nextPage"><a href="javascript:void(0)"><img src="../../static/images/prev.png"/></a></span>
                   <div class="go slidegrid">
                     <ul class="slideitems">
+                        <!--页面只展示最新3条数据-->
+                        {% for head_new in headline_news|slice:"3" %}
                       <li>
-                      	<div class="tu"><a href="news_d.html"><img src="../../static/upload/pic7.jpg" alt=""/></a></div>
+                      	<div class="tu"><a href="{% url 'news_detail' head_new.id %}"><img src="{{ head_new.img_url.url }}" alt="{{ head_new.title }}"/></a></div>
                         <div class="n_m">
                             <div class="title">
-                                <span>2015-1-11</span>
-                                <p class="name"><a href="news_d.html">头条新闻长安乌沙大酒店开始啦</a></p>
+                                <span>{{ head_new.created_time }}</span>
+                                <p class="name"><a href="{% url 'news_detail' head_new.id %}">{{ head_new.title }}</a></p>
                             </div>
                             <div class="des">
-                                头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安店开始...
+                                {{ head_new.text }}...
                             </div>
                         </div>
                       </li>
+                        {% endfor %}
                     </ul>
                   </div>
                   <span class="goright prevPage"><a href="javascript:void(0)"><img src="../../static/images/next.png" /></a></span> </div>
@@ -43,69 +46,69 @@
                 $(function(){
                 $('.mainPhoto .slidegrid').scrollable({size:1,circular:true,next:'.nextPage',prev:'.prevPage'}).autoscroll();
                 });	
-                </script> 
-            	<div class="n_m">
-                    <div class="title">
-                        <span>2015-1-11</span>
-                        <p class="name"><a href="news_d.html">头条新闻长安乌沙大酒店开始啦</a></p>
+                </script>
+                    <!--头条新闻下边展示全部新闻的第一条-->
+                    {% for new in news|slice:"1" %}
+                    <div class="n_m">
+                        <div class="title">
+                            <span>{{ new.created_time }}</span>
+                            <p class="name"><a href="{% url 'new_d' new.id %}">{{ new.title }}</a></p>
+                        </div>
+                        <div class="des">
+                            {{ new.text }} ...
+                        </div>
                     </div>
-                    <div class="des">
-                        头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...
-                    </div>
+                    {% endfor %}
                 </div>
-            </div>
         </div>
         <div class="news_r">
         	<div class="scd_top">
                 <span>全部新闻</span>
             </div>
             <div class="new_m">
-        	<div class="n_m">
-                <div class="title">
-                    <span>2015-1-11</span>
-                    <p class="name"><a href="news_d.html">头条新闻长安乌沙大酒店开始啦</a></p>
-                </div>
-                <div class="des">
-                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...
-                </div>
+                <!--展示全部新闻从第二条开始-->
+                {% for new in news|slice:"1:" %}
+                    <div class="n_m">
+                        <div class="title">
+                            <span>{{ new.created_time }}</span>
+                            <p class="name"><a href="{% url 'new_d' new.id %}">{{ new.title }}</a></p>
+                        </div>
+                        <div class="des">
+                            {{ new.text }} ...
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
-            <div class="n_m">
-                <div class="title">
-                    <span>2015-1-11</span>
-                    <p class="name"><a href="news_d.html">头条新闻长安乌沙大酒店开始啦</a></p>
-                </div>
-                <div class="des">
-                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...
-                </div>
-            </div>
-            <div class="n_m">
-                <div class="title">
-                    <span>2015-1-11</span>
-                    <p class="name"><a href="news_d.html">头条新闻长安乌沙大酒店开始啦</a></p>
-                </div>
-                <div class="des">
-                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...
-                </div>
-            </div>
-            <div class="n_m">
-                <div class="title">
-                    <span>2015-1-11</span>
-                    <p class="name"><a href="news_d.html">头条新闻长安乌沙大酒店开始啦</a></p>
-                </div>
-                <div class="des">
-                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...
-                </div>
-           </div>
-        </div>
         </div>
     </div>
     <div class="space_hx">&nbsp;</div>
-    <div class="pages">
-    	<a href="">首页</a>
-        <a href="">上一页</a>
-        <a href="">1</a>
-        <a href="">下一页</a>
-        <a href="">尾页</a>
+    <div class="fenye_box">
+    	<a href="?page=1">首页</a>
+                {#      上一页   has_previous   #}
+            {% if page_of_news.has_previous %}
+                <a href="?page={{ page_of_news.previous_page_number }}" aria-label="Previous">上一页</a>
+            {% else %}
+                <a aria-hidden="true">上一页</a>
+            {% endif %}
+                {#      上一页          #}
+             {#      全部页码          #}
+            {% for page_num in page_range %}
+                {% if page_num == page_of_news.number %}
+                    <a  class="on" style="background-color: #2b2b2b">{{ page_num }}</a>
+                {% else %}
+                    <a href="?page={{ page_num }}">{{ page_num }}</a>
+                {% endif %}
+            {% endfor %}
+            {#      全部页码          #}
+            {#      下一页          #}
+            {% if page_of_news.has_next %}
+                <a href="?page={{ page_of_news.next_page_number }}" aria-label="Next">下一页</a>
+            {% else %}
+                <a aria-hidden="true">下一页</a>
+            {% endif %}
+            {#      下一页          #}
+                 {#   尾页就是获取就大的页码数   #}
+           <a href="?page={{ paginator.num_pages }}">尾页</a>
     </div>
 </div>
 {% endblock %}

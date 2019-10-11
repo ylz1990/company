@@ -239,3 +239,6 @@ div{-webkit-transition: all .3s ease-in-out 0s;-moz-transition: all .3s ease-in-
 .book li .li_r input{ width:325px; height:40px; border:1px solid #ddd; padding:0 5px;}
 .book li .li_r .chang{ width:505px; border:1px solid #ddd;}
 .book li .li_r input[type="submit"]{ width:150px; height:40px; text-align:center; line-height:40px; background:#232323; border:1px solid #232323; cursor:pointer; color:#FFF;}
+.fenye_box{ width:600px; margin:0 auto 80px;}
+.fenye_box a{ color:#848383; font-size:14px; padding:5px 14px; background:#CCC; margin:0 5px}
+.fenye_box a:hover{ color:white; background:#0b651b; text-decoration:underline;}

@@ -19,4 +19,6 @@ from . import views
 
 urlpatterns = [
     path('', views.news, name="news"),
+    path("new_d/<int:new_id>", views.new_detail, name='new_d'),
+    path("news_detail/<int:head_id>", views.headline_news_detail, name='news_detail'),
 ]
