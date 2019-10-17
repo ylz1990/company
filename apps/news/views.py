@@ -32,6 +32,10 @@ def new_detail(request, new_id):
     new.save()
     # 显示热点文章 按阅读量排行
     hot_news =  News.objects.all().order_by("-read_num")[0:5]
+    # 上一篇
+    previoud_new = News.objects.filter(created_time__lt=new.created_time).last()
+    # 下一篇
+    next_new = News.objects.filter(created_time__gt=new.created_time).first()
     return render(request,"news/news_d.html", locals())
 
 
@@ -41,4 +45,8 @@ def headline_news_detail(request, head_id):
     # 阅读次数
     head.read_num += 1
     head.save()
+    hot_head = HeadlineNews.objects.all().order_by("-created_time")[0:5]
+    previoud_new = HeadlineNews.objects.filter(created_time__lt=head.created_time).last()
+    # 下一篇
+    next_new = HeadlineNews.objects.filter(created_time__gt=head.created_time).first()
     return render(request,"news/news_detail.html", locals())

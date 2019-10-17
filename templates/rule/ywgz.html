@@ -1,0 +1,67 @@
+{% extends "index/base.html" %}
+{% block title %}
+    <title>制度与规则 —— 福建华明元实业有限公司</title>
+{% endblock %}
+
+{% block banner %}
+<div class="banner banner_s"><img src="../../static/upload/banner_a.jpg" alt="招聘中心"/></div>
+{% endblock %}
+
+
+{% block main %}
+<div class="space_hx">&nbsp;</div>
+<div class="scd clearfix">
+	<div class="scd_top">
+    	<div class="s_nav">
+        	<a href="{% url 'ywgz' %}" class="active"><span>业务规则</span></a>
+            <a href="{% url 'qsjs' %}"><span>清算与结算</span></a>
+            <a href="{% url 'rule' %}"><span>黄金市场政策</span></a>
+            <a href="{% url 'jgdj' %}"><span>交割与定价</span></a>
+            <a href="{% url 'fxqzl' %}"><span>反洗钱专栏</span></a>
+        </div>
+    </div>
+    <div class="join clearfix">
+    	<ul class="attrct">
+            {% for rule in rules %}
+                <li>
+                    <div class="name">
+                        <a href="{% url 'rule_d' rule.id %}">{{ rule.title }}</a>
+                    </div>
+                    <div class="des">
+                        <p>{{ rule.text }}</p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    <div class="space_hx">&nbsp;</div>
+    <div class="fenye_box">
+    	<a href="?page=1">首页</a>
+                {#      上一页   has_previous   #}
+            {% if page_of_news.has_previous %}
+                <a href="?page={{ page_of_news.previous_page_number }}" aria-label="Previous">上一页</a>
+            {% else %}
+                <a aria-hidden="true">上一页</a>
+            {% endif %}
+                {#      上一页          #}
+             {#      全部页码          #}
+            {% for page_num in page_range %}
+                {% if page_num == page_of_news.number %}
+                    <a  class="on" style="background-color: #2b2b2b">{{ page_num }}</a>
+                {% else %}
+                    <a href="?page={{ page_num }}">{{ page_num }}</a>
+                {% endif %}
+            {% endfor %}
+            {#      全部页码          #}
+            {#      下一页          #}
+            {% if page_of_news.has_next %}
+                <a href="?page={{ page_of_news.next_page_number }}" aria-label="Next">下一页</a>
+            {% else %}
+                <a aria-hidden="true">下一页</a>
+            {% endif %}
+            {#      下一页          #}
+                 {#   尾页就是获取就大的页码数   #}
+           <a href="?page={{ paginator.num_pages }}">尾页</a>
+    </div>
+    </div>
+</div>
+{% endblock %}

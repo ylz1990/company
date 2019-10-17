@@ -1,15 +1,13 @@
 {% extends "index/base.html" %}
 {% block title %}
-    <title>招聘中心</title>
+    <title>招聘中心 —— 福建华明元实业有限公司</title>
 {% endblock %}
 
 {% block banner %}
-
+<div class="banner banner_s"><img src="../../static/upload/banner_a.jpg" alt="招聘中心"/></div>
 {% endblock %}
 
-
 {% block main %}
-<div class="banner banner_s"><img src="../../static/upload/banner_a.jpg" alt="招聘中心"/></div>
 <div class="space_hx">&nbsp;</div>
 <div class="scd clearfix">
 	<div class="scd_top">
@@ -18,20 +16,16 @@
             <a href="javascript:void(0);"><span>客户经理</span></a>
             <a href="javascript:void(0);"><span>行政前台</span></a>
             <a href="javascript:void(0);"><span>人事专员</span></a>
-            <a href="javascript:void(0);"><span>培训讲述</span></a>
-        </div>
-        <div class="pst">
-        	当前位置：<a href="{% url 'index' %}">首页</a>-<a href="javascript:void(0);">招聘中心</a>
+            <a href="javascript:void(0);"><span>培训讲师</span></a>
         </div>
     </div>
     <div class="join clearfix">
     	<dl class="join_a clearfix">
         	<dt>
-            	<div class="title">酒店投资——与国际顶级四季酒店、法国雅高战略合作</div>
+            	<div class="title"><h3>福建华明元实业有限公司</h3></div>
                 <div class="des">
-                	<p>公司名称服务中心 更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a>定位及建设目标：包括区域城市现状及趋势分析、服务中心改造定位、服务中心建设目标</p>
-                    <p>服务中心运营体系：包括服务中心平台架构、服务中心品牌体系两个方面</p>
-                    <p>服务中心服务平台：包括基础硬件升级改造、服务平台落地、项目工作推进规划</p>
+                    <p>我们能给你一个充满期待的未来，一个竞争力满满的你，一个值得永远战斗下去的梦想，而财富不过是实现梦想的手段。
+                    作为加入公司的新成员，不仅未来将分享到公司高速成长所带来的回报，我们也会给予最大的业务权限和工作自由，行业内各种顶尖的资源，为你的工作需求保驾护航！</p>
                 </div>
             </dt>
             <dd>
@@ -42,71 +36,57 @@
         </dl>
         <div class="space_hx">&nbsp;</div>
         <ul class="join_d clearfix">
-        	<li>
-            	<a href="">
-                	<div class="tu"><img src="../../static/upload/pic10.jpg" alt=""/></div>
+            {% for position in positions %}
+        	    <li>
+            	<a href="{% url 'recruit_d' position.id %}">
+                    {% if position.img_url.url != "" %}
+                	    <div class="tu"><img src="{{ position.img_url.url }}" alt="{{ position.title }}"/></div>
+                    {% else %}
+                        <div class="tu"><img src="../../static/upload/recruit.png" alt="{{ position.title }}"/></div>
+                    {% endif %}
                     <div class="wen">
-                    	<div class="title">乌沙大酒店</div>
+                    	<div class="title">{{ position.title }}</div>
                         <div class="des">
-                        	<p>建筑面积：约50000㎡（商业部分）</p>
-                            <p>商业建筑：写字楼群街区商业</p>
-                            <p>建筑层数：2层，地上1层及地下1层</p>
-                            <p>地址：深圳前海桂湾片区</p>
-                            <p>项目进度：全球招商进行中</p>
-                            <p>招商电话：0755-82912388-8369</p>
+                        	<p>招聘公司：{{ position.author }}</p>
+                            <p>薪资待遇：{{ position.salary }}</p>
+                            <p>发布时间：{{ position.created_time|date:"Y-m-g" }}</p>
+                            <p>岗位职责：{{ position.content|safe|truncatechars:25 }}</p>
+                            <p>岗位要求：{{ position.responsibilities|safe|truncatechars:25 }}</p>
                         </div>
                     </div>
                 </a>
             </li>
-            <li>
-            	<a href="">
-                	<div class="tu"><img src="../../static/upload/pic10.jpg" alt=""/></div>
-                    <div class="wen">
-                    	<div class="title">乌沙大酒店</div>
-                        <div class="des">
-                        	<p>建筑面积：约50000㎡（商业部分）</p>
-                            <p>商业建筑：写字楼群街区商业</p>
-                            <p>建筑层数：2层，地上1层及地下1层</p>
-                            <p>地址：深圳前海桂湾片区</p>
-                            <p>项目进度：全球招商进行中</p>
-                            <p>招商电话：0755-82912388-8369</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-            	<a href="">
-                	<div class="tu"><img src="../../static/upload/pic10.jpg" alt=""/></div>
-                    <div class="wen">
-                    	<div class="title">乌沙大酒店</div>
-                        <div class="des">
-                        	<p>建筑面积：约50000㎡（商业部分）</p>
-                            <p>商业建筑：写字楼群街区商业</p>
-                            <p>建筑层数：2层，地上1层及地下1层</p>
-                            <p>地址：深圳前海桂湾片区</p>
-                            <p>项目进度：全球招商进行中</p>
-                            <p>招商电话：0755-82912388-8369</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-            	<a href="">
-                	<div class="tu"><img src="../../static/upload/pic10.jpg" alt=""/></div>
-                    <div class="wen">
-                    	<div class="title">乌沙大酒店</div>
-                        <div class="des">
-                        	<p>建筑面积：约50000㎡（商业部分）</p>
-                            <p>商业建筑：写字楼群街区商业</p>
-                            <p>建筑层数：2层，地上1层及地下1层</p>
-                            <p>地址：深圳前海桂湾片区</p>
-                            <p>项目进度：全球招商进行中</p>
-                            <p>招商电话：0755-82912388-8369</p>
-                        </div>
-                    </div>
-                </a>
-            </li>
+            {% endfor %}
         </ul>
+        <div class="space_hx">&nbsp;</div>
+        <div class="fenye_box">
+            <a href="?page=1">首页</a>
+                    {#      上一页   has_previous   #}
+                {% if page_of_news.has_previous %}
+                    <a href="?page={{ page_of_news.previous_page_number }}" aria-label="Previous">上一页</a>
+                {% else %}
+                    <a aria-hidden="true">上一页</a>
+                {% endif %}
+                    {#      上一页          #}
+                 {#      全部页码          #}
+                {% for page_num in page_range %}
+                    {% if page_num == page_of_news.number %}
+                        <a  class="on" style="background-color: #2b2b2b">{{ page_num }}</a>
+                    {% else %}
+                        <a href="?page={{ page_num }}">{{ page_num }}</a>
+                    {% endif %}
+                {% endfor %}
+                {#      全部页码          #}
+                {#      下一页          #}
+                {% if page_of_news.has_next %}
+                    <a href="?page={{ page_of_news.next_page_number }}" aria-label="Next">下一页</a>
+                {% else %}
+                    <a aria-hidden="true">下一页</a>
+                {% endif %}
+                {#      下一页          #}
+                     {#   尾页就是获取就大的页码数   #}
+               <a href="?page={{ paginator.num_pages }}">尾页</a>
+        </div>
     </div>
 </div>
 {% endblock %}

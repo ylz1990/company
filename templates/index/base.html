@@ -43,12 +43,30 @@ $(function(){
                     <li class="now"><a href="{% url 'index' %}">首页</a></li>
                     <li><a href="about.html">关于我们</a></li>
                     <li><a href="{% url 'news' %}">新闻中心</a></li>
-                    <li class="er"><a href="{% url 'recruit' %}">招聘中心</a></li>
+                    <li class="er"><a href="{% url 'rule' %}">制度与规则</a></li>
                     <li><a href="join.html">合作伙伴</a></li>
                     <li><a href="customer.html">客户中心</a></li>
-                    <li><a href="attrct.html">招商中心</a></li>
+                    <li><a href="{% url 'recruit' %}">招聘中心</a></li>
                     <li><a href="invite.html">加入我们</a></li>
                 </ul>
+                <div class="er_m">
+                <div class="hx">
+                	<i>&nbsp;</i>
+                	<div class="b_head">
+                    	制度与规则<em>System and Rules</em>
+                    </div>
+                    <div class="hx_m clearfix">
+                    	<ul class="hx_ml">
+                        	<li><a href="{% url 'ywgz' %}" target="_blank" ><span>业务规则</span></a></li>
+                            <li><a href="{% url 'qsjs' %}" target="_blank"><span>清算与结算</span></a></li>
+                            <li><a href="{% url 'rule' %}" target="_blank"><span>黄金市场政策</span></a></li>
+                            <li><a href="{% url 'jgdj' %}" target="_blank"><span>交割与定价</span></a></li>
+                            <li><a href="{% url 'fxqzl' %}" target="_blank"><span>反洗钱专栏</span></a></li>
+                        </ul>
+                        <div class="hx_mr"><img src="../../static/upload/timg.jpg" alt="制度与规则"/></div>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </div>
@@ -101,7 +119,21 @@ $(function(){
         </li>
     </ul>
 </div>
-<div class="bq">Copyright © 1998 - 2015   公司名称服务中心 更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></div>
+<div class="bq">Copyright © 2019   公司名称服务中心 更多模板：<a href="{% url 'index' %}" target="_blank">福建华明元实业有限公司</a></div>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
 <!--尾部-->
 {% block script %}{% endblock %}
 </body>

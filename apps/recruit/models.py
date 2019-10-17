@@ -7,12 +7,10 @@ class Recruit(models.Model):
     title = models.CharField(max_length=20,verbose_name="招聘岗位",help_text="招聘岗位")
     author = models.CharField(max_length=20,verbose_name="发布人",help_text="发布人")
     salary = models.CharField(max_length=20,verbose_name="薪资待遇",help_text="薪资待遇")
-    address = models.CharField(max_length=20,verbose_name="公司地址",help_text="公司地址")
-    phone = models.CharField(max_length=20,verbose_name="联系电话",help_text="联系电话")
     responsibilities = RichTextUploadingField(verbose_name="岗位要求", help_text="岗位要求")
     content = RichTextUploadingField(verbose_name="岗位职责", help_text="岗位职责")
     created_time = models.DateTimeField(auto_now_add=True, verbose_name="发布时间", help_text="发布时间")
-    img_url = models.ImageField(upload_to='blog', default="", blank=True)  # upload_to指定图片上传的途径，如果不存在则自动创建
+    img_url = models.ImageField(upload_to='recruit', default="", blank=True)  # upload_to指定图片上传的途径，如果不存在则自动创建
 
     def __str__(self):
         return "<Recruit: %s>" % self.title

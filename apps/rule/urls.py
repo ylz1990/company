@@ -18,6 +18,10 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.recruit, name="recruit"),
-    path('recruit_d/<int:recruit_id>', views.recruit_d, name="recruit_d"),
+    path('', views.rule, name="rule"),
+    path('ywgz/', views.ywgz, name="ywgz"),
+    path('qsjs/', views.qsjs, name="qsjs"),
+    path('jgdj/', views.jgdj, name="jgdj"),
+    path('fxqzl/', views.fxqzl, name="fxqzl"),
+    path('rule_d/<int:rule_id>', views.rule_d, name="rule_d"),
 ]

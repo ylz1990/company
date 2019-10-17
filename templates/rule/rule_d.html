@@ -1,27 +1,25 @@
 {% extends "index/base.html" %}
+
 {% block title %}
-    <title>{{ head.title }}} —— 福建华明元实业有限公司</title>
+    <title>{{ rule.title }} —— 福建华明元实业有限公司</title>
 {% endblock %}
 
-{% block banner %}
-
-{% endblock %}
-
+{% block banner %}{% endblock %}
 
 {% block main %}
 <!--头部-->
 <div class="space_hx">&nbsp;</div>
 <div class="scd clearfix">
 	<div class="scd_top">
-    	<span>新闻详情</span>
+    	<span>制度与规则</span>
     </div>
     <div class="scd_m clearfix">
     	<div class="scd_ml">
-        	<h1>{{ head.title }}</h1>
+        	<h1>{{ rule.title }}</h1>
             <div class="time">
-            	<span>{{ head.created_time }}</span>
-                <span>来源：{{ head.author }}</span>
-                <span>浏览次数  {{ head.read_num }}</span>
+            	<span>{{ rule.created_time }}</span>
+                <span>来源：{{ rule.author }}</span>
+                <span>浏览次数：{{ rule.read_num }}</span>
                 <div class="font">
                 	<span>字体大小：</span>
                     <em class="on f_14">14px</em>
@@ -31,22 +29,22 @@
             </div>
             <div class="ctn">
             	<div class="des">
-                	<p>{{ head.text }}</p>
+                	<p>{{ rule.text }}</p>
                 </div>
                 <div class="ctn_m">
-                    {{ head.content|safe }}
+                    {{ rule.content|safe }}
                 </div>
             </div>
             <div class="space_hx">&nbsp;</div>
             <div style="font-size: 15px">
                 {% if previoud_new %}
-                    <h4>上一篇：<a href="{% url 'news_detail' previoud_new.pk %}">{{ previoud_new.title }}</a></h4>
+                    <h4>上一篇：<a href="{% url 'rule_d' previoud_new.pk %}">{{ previoud_new.title }}</a></h4>
                 {% else %}
                    <h4>上一篇：暂无</h4>
                {% endif %}
             <div class="space_hx">&nbsp;</div>
                 {% if next_new %}
-                    <h4>下一篇：<a href="{% url 'news_detail' next_new.pk %}">{{ next_new.title }}</a></h4>
+                    <h4>下一篇：<a href="{% url 'rule_d' next_new.pk %}">{{ next_new.title }}</a></h4>
                 {% else %}
                    <h4>下一篇：暂无最新</h4>
                {% endif %}
@@ -79,13 +77,13 @@
             </div>
             <div class="space_hx">&nbsp;</div>
             <div class="box_h">
-            	<span>头条新闻</span>
-                <a href="{% url 'news' %}">更多</a>
+            	<span>制度与规则</span>
+                <a href="{% url 'rule' %}">更多</a>
             </div>
             <div class="box_m">
             	<ul>
-                    {% for new in hot_head %}
-                	    <li><a href="{% url 'news_detail' head.id %}">{{ new.title }}</a></li>
+                    {% for rule in rule_all %}
+                	    <li><a href="{% url 'rule_d' rule.id %}">{{ rule.title }}</a></li>
                     {% endfor %}
                 </ul>
             </div>

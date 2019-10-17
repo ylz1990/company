@@ -188,7 +188,7 @@ div{-webkit-transition: all .3s ease-in-out 0s;-moz-transition: all .3s ease-in-
 .mainPhoto .n_m .des{ width:490px; margin-left:25px; height:45px; overflow:hidden;}
 .about{ width:100%; text-align:left; padding:20px 0 40px; font-size:14px; color:#333333; line-height:175%;}
 .about img{ max-width:100%; height:auto; vertical-align:top;}
-.join{ width:100%; padding:20px 0 40px;}
+.join{ width:100%; padding:20px 0 10px;}
 .join .join_a{ width:100%; padding-bottom:30px; border-bottom:1px solid #ddd;}
 .join_a dt{ width:540px; float:left; text-align:left; font-size:14px; color:#333333;}
 .join_a dt .title{ width:100%; padding:20px 0; font-weight:bold;}
@@ -239,6 +239,8 @@ div{-webkit-transition: all .3s ease-in-out 0s;-moz-transition: all .3s ease-in-
 .book li .li_r input{ width:325px; height:40px; border:1px solid #ddd; padding:0 5px;}
 .book li .li_r .chang{ width:505px; border:1px solid #ddd;}
 .book li .li_r input[type="submit"]{ width:150px; height:40px; text-align:center; line-height:40px; background:#232323; border:1px solid #232323; cursor:pointer; color:#FFF;}
-.fenye_box{ width:600px; margin:0 auto 80px;}
+.fenye_box{ width:600px; margin:0 auto 20px;}
 .fenye_box a{ color:#848383; font-size:14px; padding:5px 14px; background:#CCC; margin:0 5px}
 .fenye_box a:hover{ color:white; background:#0b651b; text-decoration:underline;}
+.join_p{ width:100%; margin-top:20px;}
+.join_p p{ margin-top:10px;color: #9B9B9B}

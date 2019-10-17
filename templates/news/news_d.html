@@ -1,6 +1,6 @@
 {% extends "index/base.html" %}
 {% block title %}
-    <title>叶良镇公司新闻详情</title>
+    <title>{{ new.title }} —— 福建华明元实业有限公司</title>
 {% endblock %}
 
 {% block banner %}
@@ -14,9 +14,6 @@
 <div class="scd clearfix">
 	<div class="scd_top">
     	<span>新闻详情</span>
-        <div class="pst">
-        	当前位置：<a href="">首页</a>-<a href="">新闻中心</a>
-        </div>
     </div>
     <div class="scd_m clearfix">
     	<div class="scd_ml">
@@ -39,6 +36,20 @@
                 <div class="ctn_m">
                     {{ new.content|safe }}
                 </div>
+            </div>
+            <div class="space_hx">&nbsp;</div>
+            <div style="font-size: 15px">
+                {% if previoud_new %}
+                    <h4>上一篇：<a href="{% url 'new_d' previoud_new.pk %}">{{ previoud_new.title }}</a></h4>
+                {% else %}
+                   <h4>上一篇：暂无</h4>
+               {% endif %}
+            <div class="space_hx">&nbsp;</div>
+                {% if next_new %}
+                    <h4>下一篇：<a href="{% url 'new_d' next_new.pk %}">{{ next_new.title }}</a></h4>
+                {% else %}
+                   <h4>下一篇：暂无最新</h4>
+               {% endif %}
             </div>
         </div>
         <div class="scd_mr">
@@ -74,7 +85,7 @@
             <div class="box_m">
             	<ul>
                     {% for new in hot_news %}
-                	<li><a href="{% url 'new_d' new.id %}">{{ new.title }}</a></li>
+                	    <li><a href="{% url 'new_d' new.id %}">{{ new.title }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
