@@ -186,8 +186,8 @@ div{-webkit-transition: all .3s ease-in-out 0s;-moz-transition: all .3s ease-in-
 .mainPhoto .n_m .title p{ width:380px;}
 .mainPhoto .n_m .title p a{ font-size:18px; color:#ED9D19;}
 .mainPhoto .n_m .des{ width:490px; margin-left:25px; height:45px; overflow:hidden;}
-.about{ width:100%; text-align:left; padding:20px 0 40px; font-size:14px; color:#333333; line-height:175%;}
-.about img{ max-width:100%; height:auto; vertical-align:top;}
+.about{ width:100%; padding:20px 0 40px; color:#333333; line-height:175%;}
+.about p{ font-size:16px;margin-bottom: 15px;color:#6d6e71;}
 .join{ width:100%; padding:20px 0 10px;}
 .join .join_a{ width:100%; padding-bottom:30px; border-bottom:1px solid #ddd;}
 .join_a dt{ width:540px; float:left; text-align:left; font-size:14px; color:#333333;}
@@ -244,3 +244,7 @@ div{-webkit-transition: all .3s ease-in-out 0s;-moz-transition: all .3s ease-in-
 .fenye_box a:hover{ color:white; background:#0b651b; text-decoration:underline;}
 .join_p{ width:100%; margin-top:20px;}
 .join_p p{ margin-top:10px;color: #9B9B9B}
+
+.contact{margin:30px}
+.contact .contact-lxfs{ width:500px;float: left;}
+.contact-lxfs p{ margin-top:10px;color: #9B9B9B;font-size: 16px}

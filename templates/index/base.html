@@ -31,7 +31,7 @@ $(function(){
 <!--头部-->
 <div class="header">
     <div class="head clearfix">
-        <div class="logo"><a href=""><img src="../../static/images/logo.png" alt="公司名称"/></a></div>
+        <div class="logo"><a href="javascript:void(0);"><img src="../../static/images/logo.png" alt="公司名称"/></a></div>
         <div class="head_r clearfix">
         	<div class="search">
                 <input name="" type="text">
@@ -41,13 +41,13 @@ $(function(){
                 <div class="n_icon">导航栏</div>
                 <ul class="nav clearfix">
                     <li class="now"><a href="{% url 'index' %}">首页</a></li>
-                    <li><a href="about.html">关于我们</a></li>
-                    <li><a href="{% url 'news' %}">新闻中心</a></li>
+                    <li><a href="{% url 'about' %}">关于我们</a></li>
+                    <li><a href="{% url 'news' %}">企业新闻</a></li>
+                    <li><a href="{% url 'golds' %}">黄金学堂</a></li>
                     <li class="er"><a href="{% url 'rule' %}">制度与规则</a></li>
-                    <li><a href="join.html">合作伙伴</a></li>
-                    <li><a href="customer.html">客户中心</a></li>
+                    <li><a href="{% url 'customer' %}">客户中心</a></li>
                     <li><a href="{% url 'recruit' %}">招聘中心</a></li>
-                    <li><a href="invite.html">加入我们</a></li>
+                    <li><a href="{% url 'contact' %}">联系我们</a></li>
                 </ul>
                 <div class="er_m">
                 <div class="hx">
@@ -100,26 +100,26 @@ $(function(){
             </a>
         </li>
         <li>
-        	<a href="">
+        	<a href="javascript:void(0);">
             	<img src="../../static/images/f_3.png" alt=""/>
                 <span>在线客服</span>
             </a>
         </li>
         <li>
-        	<a href="">
+        	<a href="javascript:void(0);">
             	<img src="../../static/images/f_4.png" alt=""/>
                 <span>关注我们</span>
             </a>
         </li>
         <li>
-        	<a href="">
+        	<a href="javascript:void(0);">
             	<img src="../../static/images/f_5.png" alt=""/>
                 <span>一键分享</span>
             </a>
         </li>
     </ul>
 </div>
-<div class="bq">Copyright © 2019   公司名称服务中心 更多模板：<a href="{% url 'index' %}" target="_blank">福建华明元实业有限公司</a></div>
+<div class="bq">Copyright © 2019.COMPANY NAME ALL RIGHTS RESERVED. <a href="javascript:void(0);">福建华明元实业有限公司</a></div>
 <script>
 (function(){
     var bp = document.createElement('script');

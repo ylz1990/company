@@ -24,5 +24,8 @@ urlpatterns = [
     path('news/', include('news.urls')),
     path('recruit/', include('recruit.urls')),
     path('rule/', include('rule.urls')),
+    path('about/', include('about.urls')),
+    path('golds/', include('golds.urls')),
+    path('customer/', include('customer.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

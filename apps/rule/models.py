@@ -26,7 +26,6 @@ class Rule(models.Model):
     content = RichTextUploadingField(verbose_name="文章", help_text="文章")
     created_time = models.DateTimeField(auto_now_add=True, verbose_name="发布时间", help_text="发布时间")
 
-
     def __str__(self):
         return "<Rule: %s>" % self.title
 

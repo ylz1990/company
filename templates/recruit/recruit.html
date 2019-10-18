@@ -38,7 +38,7 @@
         <ul class="join_d clearfix">
             {% for position in positions %}
         	    <li>
-            	<a href="{% url 'recruit_d' position.id %}">
+            	<a href="{% url 'recruit_d' position.id %}" target="_blank">
                     {% if position.img_url.url != "" %}
                 	    <div class="tu"><img src="{{ position.img_url.url }}" alt="{{ position.title }}"/></div>
                     {% else %}

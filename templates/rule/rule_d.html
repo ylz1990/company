@@ -78,12 +78,12 @@
             <div class="space_hx">&nbsp;</div>
             <div class="box_h">
             	<span>制度与规则</span>
-                <a href="{% url 'rule' %}">更多</a>
+                <a href="{% url 'rule' %}" target="_blank">更多</a>
             </div>
             <div class="box_m">
             	<ul>
                     {% for rule in rule_all %}
-                	    <li><a href="{% url 'rule_d' rule.id %}">{{ rule.title }}</a></li>
+                	    <li><a href="{% url 'rule_d' rule.id %}" target="_blank">{{ rule.title }}</a></li>
                     {% endfor %}
                 </ul>
             </div>

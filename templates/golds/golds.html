@@ -1,0 +1,97 @@
+{% extends "index/base.html" %}
+{% block title %}
+    <title>黄金学堂 —— 福建华明元实业有限公司</title>
+{% endblock %}
+
+{% block banner %}
+<div class="banner banner_s"><img src="../../static/upload/banner.jpg" alt="黄金学堂"/></div>
+{% endblock %}
+
+
+{% block main %}
+<div class="space_hx">&nbsp;</div>
+<div class="scd clearfix">
+	<div class="scd_top">
+    	<div class="s_nav">
+        	<a href="{% url 'ywgz' %}"><span>黄金TD资讯</span></a>
+            <a href="{% url 'qsjs' %}"><span>黄金投资</span></a>
+            <a href="{% url 'rule' %}" class="active"><span>机构观点</span></a>
+            <a href="{% url 'jgdj' %}"><span>黄金分析</span></a>
+        </div>
+        <div class="pst">
+        	当前位置：<a href="{% url 'index' %}">首页</a>-<a href="javascript:void(0);">黄金学堂</a>
+        </div>
+    </div>
+        <div class="news">
+            <div class="new_m">
+        	<div class="n_m" >
+                <div class="title">
+                    <span>2015-1-11</span>
+                    <p class="name"><a href="news_d.html"><b>头条新闻长安乌沙大酒店开始啦</b></a></p>
+                </div>
+                <div class="des">
+                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...
+                </div>
+                </div>
+            </div>
+            <div class="n_m">
+                <div class="title">
+                    <span>2015-1-11</span>
+                    <p class="name"><a href="news_d.html">头条新闻长安乌沙大酒店开始啦</a></p>
+                </div>
+                <div class="des">
+                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...
+                </div>
+            </div>
+            <div class="n_m">
+                <div class="title">
+                    <span>2015-1-11</span>
+                    <p class="name"><a href="news_d.html">头条新闻长安乌沙大酒店开始啦</a></p>
+                </div>
+                <div class="des">
+                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...
+                </div>
+            </div>
+            <div class="n_m">
+                <div class="title">
+                    <span>2015-1-11</span>
+                    <p class="name"><a href="news_d.html">头条新闻长安乌沙大酒店开始啦</a></p>
+                </div>
+                <div class="des">
+                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...
+                </div>
+           </div>
+        </div>
+        </div>
+    <div class="space_hx">&nbsp;</div>
+    <div class="fenye_box">
+    	<a href="?page=1">首页</a>
+                {#      上一页   has_previous   #}
+            {% if page_of_news.has_previous %}
+                <a href="?page={{ page_of_news.previous_page_number }}" aria-label="Previous">上一页</a>
+            {% else %}
+                <a aria-hidden="true">上一页</a>
+            {% endif %}
+                {#      上一页          #}
+             {#      全部页码          #}
+            {% for page_num in page_range %}
+                {% if page_num == page_of_news.number %}
+                    <a  class="on" style="background-color: #2b2b2b">{{ page_num }}</a>
+                {% else %}
+                    <a href="?page={{ page_num }}">{{ page_num }}</a>
+                {% endif %}
+            {% endfor %}
+            {#      全部页码          #}
+            {#      下一页          #}
+            {% if page_of_news.has_next %}
+                <a href="?page={{ page_of_news.next_page_number }}" aria-label="Next">下一页</a>
+            {% else %}
+                <a aria-hidden="true">下一页</a>
+            {% endif %}
+            {#      下一页          #}
+                 {#   尾页就是获取就大的页码数   #}
+           <a href="?page={{ paginator.num_pages }}">尾页</a>
+    </div>
+    </div>
+</div>
+{% endblock %}

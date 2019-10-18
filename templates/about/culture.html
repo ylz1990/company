@@ -1,0 +1,30 @@
+{% extends "index/base.html" %}
+
+{% block title %}
+    <title>企业文化 —— 福建华明元实业有限公司</title>
+{% endblock %}
+
+{% block banner %}
+<div class="banner banner_s"><img src="../../static/upload/banner_a.jpg" alt="公司简介"/></div>
+{% endblock %}
+
+{% block main %}
+<div class="space_hx">&nbsp;</div>
+<div class="scd clearfix">
+	<div class="scd_top">
+    	<div class="s_nav">
+        	<a href="{% url 'about' %}" ><span>公司简介</span></a>
+            <a href="{% url 'culture' %}" class="active"><span>企业文化</span></a>
+            <a href="{% url 'ideal' %}"><span>品牌理念</span></a>
+        </div>
+        <div class="pst">
+        	当前位置：<a href="/">首页</a>-<a href="javascript:void(0);">关于我们</a>
+        </div>
+    </div>
+    <div class="about">
+        {% for culture in cultures %}
+            {{ culture.content|safe }}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

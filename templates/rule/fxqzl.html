@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block banner %}
-<div class="banner banner_s"><img src="../../static/upload/banner_a.jpg" alt="招聘中心"/></div>
+<div class="banner banner_s"><img src="../../static/upload/banner_a.jpg" alt="制度与规则"/></div>
 {% endblock %}
 
 
@@ -25,7 +25,7 @@
             {% for rule in rules %}
                 <li>
                     <div class="name">
-                        <a href="{% url 'rule_d' rule.id %}">{{ rule.title }}</a>
+                        <a href="{% url 'rule_d' rule.id %}" target="_blank">{{ rule.title }}</a>
                     </div>
                     <div class="des">
                         <p>{{ rule.text }}</p>
