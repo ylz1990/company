@@ -4,7 +4,7 @@ a{ color:#333;}
 a:hover{ color:#F39800;}
 div{-webkit-transition: all .3s ease-in-out 0s;-moz-transition: all .3s ease-in-out 0s;-ms-transition: all .3s ease-in-out 0s;-o-transition: all .3s ease-in-out 0s;transition: all .3s ease-in-out 0s;}
 /*头部*/
-.header{ width:100%; margin:0px auto; position:relative; background:#232323;}
+.header{ width:100%; margin:0px auto; position:relative; background:black;}
 .header .head{ width:1170px; height:90px; margin:0px auto; text-align:left; position:relative;}
 .header .head .head_r{ width:965px; float:right; position:relative;}
 .head .logo{ width:191px; height:52px; float:left; margin-top:19px;}
