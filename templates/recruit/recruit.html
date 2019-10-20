@@ -1,6 +1,6 @@
 {% extends "index/base.html" %}
 {% block title %}
-    <title>招聘中心 —— 福建华明元实业有限公司</title>
+    <title>人才招聘_招聘中心 — 福建华明元实业有限公司</title>
 {% endblock %}
 
 {% block banner %}
@@ -12,20 +12,22 @@
 <div class="scd clearfix">
 	<div class="scd_top">
     	<div class="s_nav">
-        	<a href="javascript:void(0);"><span>销售代表</span></a>
-            <a href="javascript:void(0);"><span>客户经理</span></a>
-            <a href="javascript:void(0);"><span>行政前台</span></a>
-            <a href="javascript:void(0);"><span>人事专员</span></a>
-            <a href="javascript:void(0);"><span>培训讲师</span></a>
+        	<a href="javascript:void(0);"><span>人才招聘</span></a>
+        </div>
+        <div class="pst">
+        	当前位置：<a href="/">首页</a>-<a href="javascript:void(0);">招聘中心</a>
         </div>
     </div>
     <div class="join clearfix">
     	<dl class="join_a clearfix">
         	<dt>
-            	<div class="title"><h3>福建华明元实业有限公司</h3></div>
+            	<div class="title"><h3>用专业的眼光为您撑起成功的蓝天</h3></div>
                 <div class="des">
-                    <p>我们能给你一个充满期待的未来，一个竞争力满满的你，一个值得永远战斗下去的梦想，而财富不过是实现梦想的手段。
-                    作为加入公司的新成员，不仅未来将分享到公司高速成长所带来的回报，我们也会给予最大的业务权限和工作自由，行业内各种顶尖的资源，为你的工作需求保驾护航！</p>
+                    <p>我们能给你一个充满期待的未来，一个竞争力满满的你，一个值得永远战斗下去的梦想，快来加入我们吧，<b>本公司招聘的岗位有：</b></p>
+                <div class="space_hx">&nbsp;</div>
+                    {% for position in positions_all_list %}
+                        <a class="recruit" href="{% url 'recruit_d' position.id %}" target="_blank">{{ position.title }}</a>
+                    {% endfor %}
                 </div>
             </dt>
             <dd>

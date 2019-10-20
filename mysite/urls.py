@@ -29,3 +29,8 @@ urlpatterns = [
     path('customer/', include('customer.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+
+handler404 = 'index.views.page_not_found'
+handler500 = 'index.views.page_error'
+

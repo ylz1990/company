@@ -1,6 +1,6 @@
 <{% extends "index/base.html" %}
 {% block title %}
-    <title>{{ position.title }} —— 福建华明元实业有限公司</title>
+    <title>{{ position.title }} — 福建华明元实业有限公司</title>
 {% endblock %}
 
 {% block banner %}{% endblock %}
@@ -12,6 +12,10 @@
 <div class="scd clearfix">
 	<div class="scd_top">
     	<span>{{ position.title }}</span>
+
+        <div class="pst">
+                当前位置：<a href="/">首页</a>-<a href="{% url 'recruit' %}">招聘中心</a>
+        </div>
     </div>
     <div class="join clearfix">
     	<dl class="join_a clearfix">

@@ -23,62 +23,62 @@
 <div class="space_hx">&nbsp;</div>
 <div class="i_ma">
 	<div class="i_name">
-    	我们的产业
-        <p>QIHui Our industry</p>
+    	我们的服务
+        <p>HMYuan Our Service</p>
     </div>
     <div class="space_hx">&nbsp;</div>
     <ul class="clearfix">
     	<li>
-        	<a href="">
-            	<img src="../../static/images/p1.png" alt=""/>
-                <h6>一站式服务</h6>
+        	<a href="{% url 'golds' %}">
+            	<img src="../../static/images/p1.png" alt="黄金TD资讯"/>
+                <h6>黄金TD资讯</h6>
                 <div class="des">
-                	One Stop Civil Affairs Management
+                	Gold TD Information
                 </div>
             </a>
         </li>
         <li>
-        	<a href="">
-            	<img src="../../static/images/p2.png" alt=""/>
-                <h6>创客公寓</h6>
+        	<a href="{% url 'culture' %}">
+            	<img src="../../static/images/p2.png" alt="企业文化"/>
+                <h6>企业文化</h6>
                 <div class="des">
-                	A guest apartment
+                	Corporate Culture
                 </div>
             </a>
         </li>
         <li>
-        	<a href="">
-            	<img src="../../static/images/p3.png" alt=""/>
-                <h6>孵化器</h6>
+        	<a href="{% url 'news' %}">
+            	<img src="../../static/images/p3.png" alt="头条新闻"/>
+                <h6>头条新闻</h6>
                 <div class="des">
-                	Business incubator
+                	Headline News
                 </div>
             </a>
         </li>
         <li>
-        	<a href="">
-            	<img src="../../static/images/p4.png" alt=""/>
-                <h6>智慧俱乐部</h6>
+        	<a href="{% url 'golds_gd' %}">
+            	<img src="../../static/images/p4.png" alt="机构观点"/>
+                <h6>机构观点</h6>
                 <div class="des">
-                	Wisdom Made Club
+                	Institutional View
                 </div>
             </a>
         </li>
         <li>
-        	<a href="">
-            	<img src="../../static/images/p5.png" alt=""/>
-                <h6>商务办公</h6>
+        	<a href="{% url 'rule'%}">
+            	<img src="../../static/images/p5.png" alt="黄金市场政策"/>
+                <h6>黄金市场政策</h6>
                 <div class="des">
-                	Business Office
+                	Gold Market Policy
                 </div>
             </a>
         </li>
         <li>
-        	<a href="">
-            	<img src="../../static/images/p6.png" alt=""/>
-                <h6>商业街</h6>
+        	<a href="{% url 'customer'%}">
+            	<img src="../../static/images/p6.png" alt="意见和反馈"/>
+                <h6>意见和反馈</h6>
                 <div class="des">
-                	Theme-oriented Commercial Street
+                	Comments and Feedback
                 </div>
             </a>
         </li>
@@ -91,36 +91,14 @@
         	<span>新闻中心</span>News Center
         </div>
         <ul>
+            {% for new in news %}
         	<li>
-            	<a href="">
-                	<p>公司名称服务中心 更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a>再获深房</p>
-                    <em>2015-10-25</em>
+            	<a href="{% url 'new_d' new.id %}">
+                	<p>{{ new.title }}</p>
+                    <em>{{ new.created_time|date:"Y-m-d" }}</em>
                 </a>
             </li>
-            <li>
-            	<a href="">
-                	<p>公司名称服务中心 更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a>再获深房</p>
-                    <em>2015-10-25</em>
-                </a>
-            </li>
-            <li>
-            	<a href="">
-                	<p>公司名称服务中心 更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a>再获深房</p>
-                    <em>2015-10-25</em>
-                </a>
-            </li>
-            <li>
-            	<a href="">
-                	<p>公司名称服务中心 更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a>再获深房</p>
-                    <em>2015-10-25</em>
-                </a>
-            </li>
-            <li>
-            	<a href="">
-                	<p>公司名称服务中心 更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a>再获深房</p>
-                    <em>2015-10-25</em>
-                </a>
-            </li>
+            {% endfor %}
         </ul>
     </div>
     <div class="i_mbr">
@@ -176,37 +154,37 @@
                     </div>
                 </dd>
             </dl>
-            <div class="sq"><a href="">服务申请</a></div>
+            <div class="sq"><a href="">服务查询</a></div>
         </div>
         <ul class="clearfix">
         	<li>
-            	<a href="">
-                	<img src="../../static/images/f1.png" alt=""/>
-                    <span>金融服务</span>
+            	<a href="{% url 'golds_tz' %}">
+                	<img src="../../static/images/f1.png" alt="黄金投资"/>
+                    <span>黄金投资</span>
                 </a>
             </li>
             <li>
-            	<a href="">
-                	<img src="../../static/images/f2.png" alt=""/>
-                    <span>项目申报</span>
+            	<a href="{% url 'ywgz' %}">
+                	<img src="../../static/images/f2.png" alt="业务规则"/>
+                    <span>业务规则</span>
                 </a>
             </li>
             <li>
-            	<a href="">
-                	<img src="../../static/images/f3.png" alt=""/>
-                    <span>企业认定</span>
+            	<a href="{% url 'ideal' %}">
+                	<img src="../../static/images/f3.png" alt="企业理念"/>
+                    <span>企业理念</span>
                 </a>
             </li>
             <li>
-            	<a href="">
-                	<img src="../../static/images/f4.png" alt=""/>
-                    <span>人才服务</span>
+            	<a href="{% url 'recruit' %}">
+                	<img src="../../static/images/f4.png" alt="人才招聘"/>
+                    <span>人才招聘</span>
                 </a>
             </li>
             <li>
-            	<a href="">
-                	<img src="../../static/images/f5.png" alt=""/>
-                    <span>人力资源</span>
+            	<a href="{% url 'fxqzl' %}">
+                	<img src="../../static/images/f5.png" alt="反洗钱专栏"/>
+                    <span>反洗钱专栏</span>
                 </a>
             </li>
             <li>&nbsp;</li>
@@ -218,11 +196,9 @@
 <div class="friend">
 	<div class="b_head"><span>友情链接</span></div>
     <div class="frd_m">
-    	<a href="">百度</a>
-        <a href="">阿里巴巴</a>
-        <a href="">QQ</a>
-        <a href="">网易</a>
-        <a href="">新浪</a>
+    	<a href="https://www.sge.com.cn/">上海黄金交易所</a>
+        <a href="http://www.dyhjw.com">第一黄金网</a>
+        <a href="http://gold.hexun.com/">和讯黄金网</a>
     </div>
 </div>
 {% endblock %}

@@ -1,10 +1,10 @@
 {% extends "index/base.html" %}
 {% block title %}
-    <title>制度与规则 — 福建华明元实业有限公司</title>
+    <title>机构观点_黄金投资观点_名家观点 — 福建华明元实业有限公司</title>
 {% endblock %}
 
 {% block banner %}
-<div class="banner banner_s"><img src="../../static/upload/banner_a.jpg" alt="制度与规则"/></div>
+<div class="banner banner_s"><img src="../../static/upload/banner.jpg" alt="黄金学堂"/></div>
 {% endblock %}
 
 
@@ -13,26 +13,30 @@
 <div class="scd clearfix">
 	<div class="scd_top">
     	<div class="s_nav">
-        	<a href="{% url 'ywgz' %}"><span>业务规则</span></a>
-            <a href="{% url 'qsjs' %}"><span>清算与结算</span></a>
-            <a href="{% url 'rule' %}" class="active"><span>黄金市场政策</span></a>
-            <a href="{% url 'jgdj' %}"><span>交割与定价</span></a>
-            <a href="{% url 'fxqzl' %}"><span>反洗钱专栏</span></a>
+        	<a href="{% url 'golds' %}"><span>黄金TD资讯</span></a>
+            <a href="{% url 'golds_tz' %}"><span>黄金投资</span></a>
+            <a href="{% url 'golds_gd' %}" class="active"><span>机构观点</span></a>
+            <a href="{% url 'golds_fx' %}"><span>机构分析</span></a>
+        </div>
+        <div class="pst">
+        	当前位置：<a href="{% url 'index' %}">首页</a>-<a href="javascript:void(0);">黄金学堂</a>
         </div>
     </div>
-    <div class="join clearfix">
-    	<ul class="attrct">
-            {% for rule in rules %}
-                <li>
-                    <div class="name">
-                        <a href="{% url 'rule_d' rule.id %}" target="_blank">{{ rule.title }}</a>
+        <div class="news">
+            <div class="new_m">
+                {% for gold in golds %}
+                    <div class="n_m" >
+                        <div class="title">
+                            <span>{{ gold.created_time|date:"Y-m-d" }}</span>
+                            <p class="name"><a href="{% url 'golds_d' gold.id %}"><b>{{ gold.title }}</b></a></p>
+                        </div>
+                        <div class="des">
+                            {{ gold.text }} ...
+                        </div>
                     </div>
-                    <div class="des">
-                        <p>{{ rule.text }}</p>
-                    </div>
-                </li>
-            {% endfor %}
-        </ul>
+                {% endfor %}
+            </div>
+        </div>
     <div class="space_hx">&nbsp;</div>
     <div class="fenye_box">
     	<a href="?page=1">首页</a>

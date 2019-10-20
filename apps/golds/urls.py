@@ -19,4 +19,8 @@ from . import views
 
 urlpatterns = [
     path('', views.golds,name="golds"),
+    path('golds_tz/', views.golds_tz,name="golds_tz"),
+    path('golds_gd/', views.golds_gd,name="golds_gd"),
+    path('golds_fx/', views.golds_fx,name="golds_fx"),
+    path('golds_d/<int:golds_id>', views.golds_d,name="golds_d"),
 ]

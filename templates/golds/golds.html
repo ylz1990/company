@@ -1,6 +1,6 @@
 {% extends "index/base.html" %}
 {% block title %}
-    <title>黄金学堂 —— 福建华明元实业有限公司</title>
+    <title>黄金TD资讯_黄金TD分析_黄金TD问答 — 福建华明元实业有限公司</title>
 {% endblock %}
 
 {% block banner %}
@@ -13,10 +13,10 @@
 <div class="scd clearfix">
 	<div class="scd_top">
     	<div class="s_nav">
-        	<a href="{% url 'ywgz' %}"><span>黄金TD资讯</span></a>
-            <a href="{% url 'qsjs' %}"><span>黄金投资</span></a>
-            <a href="{% url 'rule' %}" class="active"><span>机构观点</span></a>
-            <a href="{% url 'jgdj' %}"><span>黄金分析</span></a>
+        	<a href="{% url 'golds' %}"  class="active"><span>黄金TD资讯</span></a>
+            <a href="{% url 'golds_tz' %}"><span>黄金投资</span></a>
+            <a href="{% url 'golds_gd' %}"><span>机构观点</span></a>
+            <a href="{% url 'golds_fx' %}"><span>机构分析</span></a>
         </div>
         <div class="pst">
         	当前位置：<a href="{% url 'index' %}">首页</a>-<a href="javascript:void(0);">黄金学堂</a>
@@ -24,44 +24,18 @@
     </div>
         <div class="news">
             <div class="new_m">
-        	<div class="n_m" >
-                <div class="title">
-                    <span>2015-1-11</span>
-                    <p class="name"><a href="news_d.html"><b>头条新闻长安乌沙大酒店开始啦</b></a></p>
-                </div>
-                <div class="des">
-                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...
-                </div>
-                </div>
+                {% for gold in golds %}
+                    <div class="n_m" >
+                        <div class="title">
+                            <span>{{ gold.created_time|date:"Y-m-d" }}</span>
+                            <p class="name"><a href="{% url 'golds_d' gold.id %}"><b>{{ gold.title }}</b></a></p>
+                        </div>
+                        <div class="des">
+                            {{ gold.text }} ...
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
-            <div class="n_m">
-                <div class="title">
-                    <span>2015-1-11</span>
-                    <p class="name"><a href="news_d.html">头条新闻长安乌沙大酒店开始啦</a></p>
-                </div>
-                <div class="des">
-                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...
-                </div>
-            </div>
-            <div class="n_m">
-                <div class="title">
-                    <span>2015-1-11</span>
-                    <p class="name"><a href="news_d.html">头条新闻长安乌沙大酒店开始啦</a></p>
-                </div>
-                <div class="des">
-                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...
-                </div>
-            </div>
-            <div class="n_m">
-                <div class="title">
-                    <span>2015-1-11</span>
-                    <p class="name"><a href="news_d.html">头条新闻长安乌沙大酒店开始啦</a></p>
-                </div>
-                <div class="des">
-                    头条新闻长安乌沙大酒店开始啦九月的深圳秋高氣爽陽光和煦中國公益慈善項目始啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒啦九月的深圳秋深圳會展中心順利舉辦条新闻长安乌沙大酒店开始...
-                </div>
-           </div>
-        </div>
         </div>
     <div class="space_hx">&nbsp;</div>
     <div class="fenye_box">
