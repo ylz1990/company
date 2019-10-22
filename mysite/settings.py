@@ -151,7 +151,8 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'custom',
         'toolbar_custom': [
             ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript'],
-            ["TextColor", "BGColor", 'RemoveFormat'],
+            ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+            ['Font',"TextColor", "BGColor", 'RemoveFormat'],
             ['NumberedList', 'BulletedList'],
             ['Link', 'Unlink'],
             ["Smiley", "SpecialChar", 'Blockquote'],

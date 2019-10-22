@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Rule,RuleType
+from .models import Rule
 from django.core.paginator import Paginator
 # Create your views here.
 
