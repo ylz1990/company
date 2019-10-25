@@ -29,7 +29,7 @@
     <div class="space_hx">&nbsp;</div>
     <ul class="clearfix">
     	<li>
-        	<a href="{% url 'golds' %}">
+        	<a href="{% url 'golds' %}" target="_blank">
             	<img src="../../static/images/p1.png" alt="黄金TD资讯"/>
                 <h6>黄金TD资讯</h6>
                 <div class="des">
@@ -38,7 +38,7 @@
             </a>
         </li>
         <li>
-        	<a href="{% url 'culture' %}">
+        	<a href="{% url 'culture' %}" target="_blank">
             	<img src="../../static/images/p2.png" alt="企业文化"/>
                 <h6>企业文化</h6>
                 <div class="des">
@@ -47,7 +47,7 @@
             </a>
         </li>
         <li>
-        	<a href="{% url 'news' %}">
+        	<a href="{% url 'news' %}" target="_blank">
             	<img src="../../static/images/p3.png" alt="头条新闻"/>
                 <h6>头条新闻</h6>
                 <div class="des">
@@ -56,7 +56,7 @@
             </a>
         </li>
         <li>
-        	<a href="{% url 'golds_gd' %}">
+        	<a href="{% url 'golds_gd' %}" target="_blank">
             	<img src="../../static/images/p4.png" alt="机构观点"/>
                 <h6>机构观点</h6>
                 <div class="des">
@@ -65,7 +65,7 @@
             </a>
         </li>
         <li>
-        	<a href="{% url 'rule'%}">
+        	<a href="{% url 'rule'%}" target="_blank">
             	<img src="../../static/images/p5.png" alt="黄金市场政策"/>
                 <h6>黄金市场政策</h6>
                 <div class="des">
@@ -74,7 +74,7 @@
             </a>
         </li>
         <li>
-        	<a href="{% url 'customer'%}">
+        	<a href="{% url 'customer'%}" target="_blank">
             	<img src="../../static/images/p6.png" alt="意见和反馈"/>
                 <h6>意见和反馈</h6>
                 <div class="des">
@@ -93,7 +93,7 @@
         <ul>
             {% for new in news %}
         	<li>
-            	<a href="{% url 'new_d' new.id %}">
+            	<a href="{% url 'new_d' new.id %}" target="_blank">
                 	<p>{{ new.title }}</p>
                     <em>{{ new.created_time|date:"Y-m-d" }}</em>
                 </a>
@@ -157,31 +157,31 @@
         </div>
         <ul class="clearfix">
         	<li>
-            	<a href="{% url 'golds_tz' %}">
+            	<a href="{% url 'golds_tz' %}" target="_blank">
                 	<img src="../../static/images/f1.png" alt="黄金投资"/>
                     <span>黄金投资</span>
                 </a>
             </li>
             <li>
-            	<a href="{% url 'ywgz' %}">
+            	<a href="{% url 'ywgz' %}" target="_blank">
                 	<img src="../../static/images/f2.png" alt="业务规则"/>
                     <span>业务规则</span>
                 </a>
             </li>
             <li>
-            	<a href="{% url 'ideal' %}">
+            	<a href="{% url 'ideal' %}" target="_blank">
                 	<img src="../../static/images/f3.png" alt="企业理念"/>
                     <span>企业理念</span>
                 </a>
             </li>
             <li>
-            	<a href="{% url 'recruit' %}">
+            	<a href="{% url 'recruit' %}" target="_blank">
                 	<img src="../../static/images/f4.png" alt="人才招聘"/>
                     <span>人才招聘</span>
                 </a>
             </li>
             <li>
-            	<a href="{% url 'fxqzl' %}">
+            	<a href="{% url 'fxqzl' %}" target="_blank">
                 	<img src="../../static/images/f5.png" alt="反洗钱专栏"/>
                     <span>反洗钱专栏</span>
                 </a>
@@ -195,9 +195,9 @@
 <div class="friend">
 	<div class="b_head"><span>友情链接</span></div>
     <div class="frd_m">
-    	<a href="https://www.sge.com.cn/">上海黄金交易所</a>
-        <a href="http://www.dyhjw.com">第一黄金网</a>
-        <a href="http://gold.hexun.com/">和讯黄金网</a>
+    	<a href="https://www.sge.com.cn/" target="_blank">上海黄金交易所</a>
+        <a href="http://www.dyhjw.com" target="_blank">第一黄金网</a>
+        <a href="http://gold.hexun.com/" target="_blank">和讯黄金网</a>
     </div>
 </div>
 {% endblock %}

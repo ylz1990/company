@@ -243,7 +243,7 @@ div{-webkit-transition: all .3s ease-in-out 0s;-moz-transition: all .3s ease-in-
 .fenye_box a{ color:#848383; font-size:14px; padding:5px 14px; background:#CCC; margin:0 5px}
 .fenye_box a:hover{ color:white; background:#0b651b; text-decoration:underline;}
 .join_p{ width:100%; margin-top:20px;}
-.join_p p{ margin-top:10px;color: #9B9B9B}
+.join_p p{ margin-top:10px;color: #9B9B9B;font-size: 16px}
 .contact{margin:30px}
 .contact .contact-lxfs{ width:500px;float: left;}
 .contact-lxfs p{ margin-top:10px;color: #9B9B9B;font-size: 16px}

@@ -28,7 +28,7 @@
                     <div class="n_m" >
                         <div class="title">
                             <span>{{ gold.created_time|date:"Y-m-d" }}</span>
-                            <p class="name"><a href="{% url 'golds_d' gold.id %}"><b>{{ gold.title }}</b></a></p>
+                            <p class="name"><a href="{% url 'golds_d' gold.id %}" target="_blank"><b>{{ gold.title }}</b></a></p>
                         </div>
                         <div class="des">
                             {{ gold.text }} ...

@@ -43,13 +43,13 @@ $(function(){
                 <div class="n_icon">导航栏</div>
                 <ul class="nav clearfix">
                     <li class="now"><a href="{% url 'index' %}">首页</a></li>
-                    <li><a href="{% url 'about' %}">关于我们</a></li>
-                    <li><a href="{% url 'news' %}">企业新闻</a></li>
-                    <li class="er"><a href="{% url 'golds' %}">黄金学堂</a></li>
-                    <li><a href="{% url 'rule' %}">制度与规则</a></li>
-                    <li><a href="{% url 'recruit' %}">招聘中心</a></li>
-                    <li><a href="{% url 'customer' %}" rel="nofollow">客户中心</a></li>
-                    <li><a href="{% url 'contact' %}" rel="nofollow">联系我们</a></li>
+                    <li><a target="_blank"  href="{% url 'about' %}">关于我们</a></li>
+                    <li><a target="_blank"  href="{% url 'news' %}">企业新闻</a></li>
+                    <li class="er"><a target="_blank"  href="{% url 'golds' %}">黄金学堂</a></li>
+                    <li><a target="_blank"  href="{% url 'rule' %}">制度与规则</a></li>
+                    <li><a target="_blank"  href="{% url 'recruit' %}">招聘中心</a></li>
+                    <li><a target="_blank"  href="{% url 'customer' %}" rel="nofollow">客户中心</a></li>
+                    <li><a target="_blank"  href="{% url 'contact' %}" rel="nofollow">联系我们</a></li>
                 </ul>
                 <div class="er_m">
                 <div class="hx">
@@ -89,13 +89,13 @@ $(function(){
 <div class="fn_bg">
 	<ul class="f_nav clearfix">
     	<li>
-        	<a href="{% url 'contact' %}">
+        	<a target="_blank"  href="{% url 'contact' %}">
             	<img src="../../static/images/f_1.png" alt="联系我们"/>
                 <span>联系我们</span>
             </a>
         </li>
         <li>
-        	<a href="{% url 'customer' %}">
+        	<a target="_blank"  href="{% url 'customer' %}">
             	<img src="../../static/images/f_2.png" alt="客户服务"/>
                 <span>客户服务</span>
             </a>
