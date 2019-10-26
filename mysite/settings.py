@@ -26,7 +26,7 @@ sys.path.insert(1, os.path.join(BASE_DIR, "apps"))
 SECRET_KEY = 'sy9h12wj7c^3i+3^g6bs@!iro5g6bm9u_p2hhhv9xzw^&yvdtp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -86,14 +86,25 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+"""
+# DATABASE_PASSWORD = os.environ["DATABASE_PASSWORD"]
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'huamingyuan',  # 你的数据库名称 数据库需要自己提前建好
+        'USER': 'hmy',  # 你的数据库用户名
+        'PASSWORD': 'hmy8888',  # 你的数据库密码
+        'HOST': 'localhost',  # 你的数据库主机，留空默认为localhost
+        'PORT': '3306',  # 你的数据库端口
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
