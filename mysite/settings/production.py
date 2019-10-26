@@ -9,12 +9,12 @@ https://docs.djangoproject.com/en/2.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
-
+# 生产环境
 import os
 import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # 在项目目录中创建一个包 apps，之后将所有app放到一个apps文件夹中,
 sys.path.insert(0, BASE_DIR)
 sys.path.insert(1, os.path.join(BASE_DIR, "apps"))
@@ -23,10 +23,10 @@ sys.path.insert(1, os.path.join(BASE_DIR, "apps"))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'sy9h12wj7c^3i+3^g6bs@!iro5g6bm9u_p2hhhv9xzw^&yvdtp'
+SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -94,13 +94,13 @@ DATABASES = {
     }
 }
 """
-# DATABASE_PASSWORD = os.environ["DATABASE_PASSWORD"]
+DATABASE_PASSWORD = os.environ["DATABASE_PASSWORD"]
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'huamingyuan',  # 你的数据库名称 数据库需要自己提前建好
         'USER': 'hmy',  # 你的数据库用户名
-        'PASSWORD': 'hmy8888',  # 你的数据库密码
+        'PASSWORD': DATABASE_PASSWORD,  # 你的数据库密码
         'HOST': 'localhost',  # 你的数据库主机，留空默认为localhost
         'PORT': '3306',  # 你的数据库端口
     }
@@ -174,4 +174,37 @@ CKEDITOR_CONFIGS = {
         'removePlugins': 'elementspath',
         'resize_enabled': False,
     }
+}
+
+ADMINS = (
+    ('admin', '827937539@qq.com'),
+)
+
+# 日志文件
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/home/mysite_debug.log',
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+    },
 }

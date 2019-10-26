@@ -1,0 +1,5 @@
+db.sqlite3
+__pycache__/
+static_collected/
+data.json
+data.sql
