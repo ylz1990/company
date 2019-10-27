@@ -19,6 +19,9 @@
             <a href="{% url 'jgdj' %}"><span>交割与定价</span></a>
             <a href="{% url 'fxqzl' %}"><span>反洗钱专栏</span></a>
         </div>
+        <div class="pst">
+                当前位置：<a href="/">首页</a>-<a href="javascript:void(0);">业务规则</a>
+        </div>
     </div>
     <div class="join clearfix">
     	<ul class="attrct">
@@ -34,7 +37,7 @@
             {% endfor %}
         </ul>
     <div class="space_hx">&nbsp;</div>
-    <div class="fenye_box">
+    <div class="pages">
     	<a href="?page=1">首页</a>
                 {#      上一页   has_previous   #}
             {% if page_of_news.has_previous %}
@@ -46,9 +49,9 @@
              {#      全部页码          #}
             {% for page_num in page_range %}
                 {% if page_num == page_of_news.number %}
-                    <a  class="on" style="background-color: #2b2b2b">{{ page_num }}</a>
+                    <a  class="on" style="background-color: #ddd;width: 33px">{{ page_num }}</a>
                 {% else %}
-                    <a href="?page={{ page_num }}">{{ page_num }}</a>
+                    <a href="?page={{ page_num }}" style="width: 33px">{{ page_num }}</a>
                 {% endif %}
             {% endfor %}
             {#      全部页码          #}
