@@ -38,7 +38,7 @@
             </div>
         </div>
     <div class="space_hx">&nbsp;</div>
-    <div class="fenye_box">
+    <div class="pages">
     	<a href="?page=1">首页</a>
                 {#      上一页   has_previous   #}
             {% if page_of_news.has_previous %}
@@ -50,9 +50,9 @@
              {#      全部页码          #}
             {% for page_num in page_range %}
                 {% if page_num == page_of_news.number %}
-                    <a  class="on" style="background-color: #2b2b2b">{{ page_num }}</a>
+                    <a  class="on" style="background-color: #ddd;width: 33px">{{ page_num }}</a>
                 {% else %}
-                    <a href="?page={{ page_num }}">{{ page_num }}</a>
+                    <a href="?page={{ page_num }}"  style="width: 33px">{{ page_num }}</a>
                 {% endif %}
             {% endfor %}
             {#      全部页码          #}
