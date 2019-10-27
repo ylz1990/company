@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32354e68-9c01-4c27-85b0-10c79a1ec5d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/thems.css" afterPath="$PROJECT_DIR$/static/css/thems.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/golds/golds.html" afterPath="$PROJECT_DIR$/templates/golds/golds.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/golds/golds_fx.html" afterPath="$PROJECT_DIR$/templates/golds/golds_fx.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/golds/golds_gd.html" afterPath="$PROJECT_DIR$/templates/golds/golds_gd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/golds/golds_tz.html" afterPath="$PROJECT_DIR$/templates/golds/golds_tz.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/news/news.html" afterPath="$PROJECT_DIR$/templates/news/news.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/recruit/recruit.html" afterPath="$PROJECT_DIR$/templates/recruit/recruit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/rule/fxqzl.html" afterPath="$PROJECT_DIR$/templates/rule/fxqzl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/rule/jgdj.html" afterPath="$PROJECT_DIR$/templates/rule/jgdj.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/rule/qsjs.html" afterPath="$PROJECT_DIR$/templates/rule/qsjs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/rule/rule.html" afterPath="$PROJECT_DIR$/templates/rule/rule.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index/base.html" afterPath="$PROJECT_DIR$/templates/index/base.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -89,7 +79,6 @@
         <option value="D:/python/Lib/socketserver.py" />
         <option value="$PROJECT_DIR$/mysite/urls.py" />
         <option value="$PROJECT_DIR$/apps/rule/views.py" />
-        <option value="$PROJECT_DIR$/templates/index/base.html" />
         <option value="$PROJECT_DIR$/templates/index/index.html" />
         <option value="$PROJECT_DIR$/templates/handler_500.html" />
         <option value="$PROJECT_DIR$/templates/handler_404.html" />
@@ -110,8 +99,9 @@
         <option value="$PROJECT_DIR$/templates/rule/qsjs.html" />
         <option value="$PROJECT_DIR$/templates/rule/jgdj.html" />
         <option value="$PROJECT_DIR$/templates/rule/fxqzl.html" />
-        <option value="$PROJECT_DIR$/static/css/thems.css" />
         <option value="$PROJECT_DIR$/templates/news/news.html" />
+        <option value="$PROJECT_DIR$/static/css/thems.css" />
+        <option value="$PROJECT_DIR$/templates/index/base.html" />
       </list>
     </option>
   </component>
@@ -183,25 +173,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="company" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="company" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recruit" />
+              <option name="myItemId" value="index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -695,13 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="10" column="63" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/recruit/recruit_d.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="813">
@@ -858,21 +823,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/thems.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="246" column="59" lean-forward="true" selection-start-line="246" selection-start-column="59" selection-end-line="246" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/rule/fxqzl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="45" column="37" lean-forward="true" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
           <folding>
-            <element signature="n#style#0;n#a#3;n#div#1;n#div#1;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#4;n#div#1;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#3;n#div#1;n#div#1;n#div#2;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#4;n#div#1;n#div#1;n#div#2;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -892,6 +849,25 @@
           <folding>
             <element signature="n#style#0;n#a#3;n#div#2;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#4;n#div#2;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/thems.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="119" column="69" lean-forward="false" selection-start-line="119" selection-start-column="69" selection-end-line="119" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="119" column="13" lean-forward="true" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
+          <folding>
+            <element signature="e#4613#4619#0#HTML" expanded="true" />
+            <element signature="e#4619#4625#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
