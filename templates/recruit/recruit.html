@@ -12,10 +12,10 @@
 <div class="scd clearfix">
 	<div class="scd_top">
     	<div class="s_nav">
-        	<a href="javascript:void(0);"><span>人才招聘</span></a>
+        	<a href="javascript:void(0);"><span>人才发展</span></a>
         </div>
         <div class="pst">
-        	当前位置：<a href="/">首页</a>-<a href="javascript:void(0);">招聘中心</a>
+        	当前位置：<a href="/">首页</a>-<a href="javascript:void(0);">人才理念</a>
         </div>
     </div>
     <div class="join clearfix">
@@ -23,17 +23,15 @@
         	<dt>
             	<div class="title"><h3>用专业的眼光为您撑起成功的蓝天</h3></div>
                 <div class="des">
-                    <p>我们能给你一个充满期待的未来，一个竞争力满满的你，一个值得永远战斗下去的梦想，快来加入我们吧，<b>本公司招聘的岗位有：</b></p>
-                <div class="space_hx">&nbsp;</div>
-                    {% for position in positions_all_list %}
-                        <a class="recruit" href="{% url 'recruit_d' position.id %}" target="_blank">{{ position.title }}</a>
-                    {% endfor %}
+                    <p style="font-size: 16px;color: #858585">我们能给你一个充满期待的未来，一个竞争力满满的你，一个值得永远战斗下去的梦想，而财富不过是实现梦想的手段。
+                    作为加入公司的新成员，不仅未来将分享到公司高速成长所带来的回报，我们也会给予最大的业务权限和工作自由，行业内各种顶尖的资源，为你的工作需求保驾护航！</p>
                 </div>
             </dt>
             <dd>
-            	<a href="javascript:void(0);"><span>薪资待遇</span></a>
-                <a href="javascript:void(0);"><span>岗位职责</span></a>
-                <a href="javascript:void(0);"><span>岗位要求</span></a>
+            	<a href="javascript:void(0);"><span>德才兼备</span></a>
+                <a href="javascript:void(0);"><span>不拘一格</span></a>
+                <a href="javascript:void(0);"><span>人尽其才</span></a>
+                <a href="javascript:void(0);"><span>才尽其用</span></a>
             </dd>
         </dl>
         <div class="space_hx">&nbsp;</div>
@@ -49,46 +47,14 @@
                     <div class="wen">
                     	<div class="title">{{ position.title }}</div>
                         <div class="des">
-                        	<p>招聘公司：{{ position.author }}</p>
-                            <p>薪资待遇：{{ position.salary }}</p>
-                            <p>发布时间：{{ position.created_time|date:"Y-m-g" }}</p>
-                            <p>岗位职责：{{ position.content|safe|truncatechars:25 }}</p>
-                            <p>岗位要求：{{ position.responsibilities|safe|truncatechars:25 }}</p>
+                        	<p>{{ position.author }}</p>
+                            <p>{{ position.content|safe|truncatechars:100 }}...</p>
                         </div>
                     </div>
                 </a>
             </li>
             {% endfor %}
         </ul>
-        <div class="space_hx">&nbsp;</div>
-        <div class="pages">
-            <a href="?page=1">首页</a>
-                    {#      上一页   has_previous   #}
-                {% if page_of_news.has_previous %}
-                    <a href="?page={{ page_of_news.previous_page_number }}" aria-label="Previous">上一页</a>
-                {% else %}
-                    <a aria-hidden="true">上一页</a>
-                {% endif %}
-                    {#      上一页          #}
-                 {#      全部页码          #}
-                {% for page_num in page_range %}
-                    {% if page_num == page_of_news.number %}
-                        <a  class="on" style="background-color: #ddd;width: 33px">{{ page_num }}</a>
-                    {% else %}
-                        <a href="?page={{ page_num }}"  style="width: 33px">{{ page_num }}</a>
-                    {% endif %}
-                {% endfor %}
-                {#      全部页码          #}
-                {#      下一页          #}
-                {% if page_of_news.has_next %}
-                    <a href="?page={{ page_of_news.next_page_number }}" aria-label="Next">下一页</a>
-                {% else %}
-                    <a aria-hidden="true">下一页</a>
-                {% endif %}
-                {#      下一页          #}
-                     {#   尾页就是获取就大的页码数   #}
-               <a href="?page={{ paginator.num_pages }}">尾页</a>
-        </div>
     </div>
 </div>
 {% endblock %}

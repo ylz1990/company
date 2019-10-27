@@ -7,14 +7,13 @@
 
 {% block main %}
 <!--头部-->
-<div class="banner banner_s"><img src="../../static/upload/banner_a.jpg" alt=""/></div>
+<div class="banner banner_s"><img src="../../static/upload/banner_a.jpg" alt="福建华明元实业有限公司"/></div>
 <div class="space_hx">&nbsp;</div>
 <div class="scd clearfix">
 	<div class="scd_top">
     	<span>{{ position.title }}</span>
-
         <div class="pst">
-                当前位置：<a href="/">首页</a>-<a href="{% url 'recruit' %}">招聘中心</a>
+                当前位置：<a href="/">首页</a>-<a href="{% url 'recruit' %}">人才理念</a>
         </div>
     </div>
     <div class="join clearfix">
@@ -22,24 +21,19 @@
         	<dt>
             	<div class="title"><h3>福建华明元实业有限公司</h3></div>
                 <div class="des">
-                    <p>我们能给你一个充满期待的未来，一个竞争力满满的你，一个值得永远战斗下去的梦想，而财富不过是实现梦想的手段。
+                    <p style="font-size: 16px;color: #858585">我们能给你一个充满期待的未来，一个竞争力满满的你，一个值得永远战斗下去的梦想，而财富不过是实现梦想的手段。
                     作为加入公司的新成员，不仅未来将分享到公司高速成长所带来的回报，我们也会给予最大的业务权限和工作自由，行业内各种顶尖的资源，为你的工作需求保驾护航！</p>
                 </div>
             </dt>
             <dd>
-            	<a href="javascript:void(0);"><span>薪资待遇</span></a>
-                <a href="javascript:void(0);"><span>岗位职责</span></a>
-                <a href="javascript:void(0);"><span>岗位要求</span></a>
+            	<a href="javascript:void(0);"><span>德才兼备</span></a>
+                <a href="javascript:void(0);"><span>不拘一格</span></a>
+                <a href="javascript:void(0);"><span>人尽其才</span></a>
+                <a href="javascript:void(0);"><span>才尽其用</span></a>
             </dd>
         </dl>
         <div class="join_p clearfix">
-            <h3>薪资待遇：</h3> <p>{{ position.salary }}</p>
-            <div class="space_hx">&nbsp;</div>
-            <h3>岗位职责：</h3>
-        	    {{ position.content|safe }}
-            <div class="space_hx">&nbsp;</div>
-            <h3>岗位要求：</h3>
-                {{ position.responsibilities|safe }}
+            {{ position.responsibilities|safe }}
         </div>
     </div>
 </div>
